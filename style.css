@@ -1,0 +1,55 @@
+html {
+  display: block;
+}
+* {
+  margin: 5px;
+  padding: 5px;
+}
+.navigation {
+  display: flex;
+  justify-content: left;
+}
+body {
+  background-color: rgb(250, 244, 236);
+}
+#logo {
+  display: block;
+  max-width: 30vw;
+  height: 100;
+}
+nav ul li {
+  display: inline;
+}
+nav ul {
+  text-align: right;
+}
+nav ul li a {
+  color: brown;
+  font-size: larger;
+  text-decoration: none;
+}
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 100px));
+  /* grid-gap: 0.5rem; */
+}
+.bikeimages {
+  display: block;
+  max-width: 25vw;
+  height: 100;
+}
+/* mobile view */
+@media screen and (max-width: 515px) {
+  .navigation {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  nav ul {
+    text-align: left;
+  }
+  .bikeimages {
+    display: block;
+    max-width: 80vw;
+    height: 100;
+  }
+}

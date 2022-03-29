@@ -27,7 +27,10 @@ function displayBike(bike) {
     //     singleBike._embedded["wp:featuredmedia"][0].media_details.sizes.medium
     //       .source_url
     //   );
-    copy.querySelector(".bikeimages").src = bike.featured_media;
+    copy.querySelector(".bikeimages").src =
+      bike._embedded[
+        "wp:featuredmedia"
+      ][0].media_details.sizes.medium.source_url;
     //   bike._embedded[
     //     "wp:featuredmedia"
     //   ][3].media_details.sizes.medium.source_url

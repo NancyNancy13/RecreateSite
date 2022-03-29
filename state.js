@@ -5,7 +5,7 @@ function init(event) {
 }
 async function loadData() {
   const reponse = await fetch(
-    "https://technancy.dk/bikewp/wp-json/wp/v2/bike?categories=4"
+    "https://technancy.dk/bikewp/wp-json/wp/v2/bike?categories=4&_embed"
   );
   //   console.log("reponse2", reponse);
   const bikeData = await reponse.json();

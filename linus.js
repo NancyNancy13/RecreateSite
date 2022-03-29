@@ -5,7 +5,7 @@ function init(event) {
 }
 async function loadData() {
   const reponse = await fetch(
-    "https://technancy.dk/bikewp/wp-json/wp/v2/bike?categories=3"
+    "https://technancy.dk/bikewp/wp-json/wp/v2/bike?categories=3&_embed"
   );
   //   console.log("reponse2", reponse);
   const bikeData = await reponse.json();
@@ -27,7 +27,10 @@ function displayBike(bike) {
     //     singleBike._embedded["wp:featuredmedia"][0].media_details.sizes.medium
     //       .source_url
     //   );
-    copy.querySelector(".bikeimages").src = bike.featured_media;
+    copy.querySelector(".bikeimages").src =
+      bike._embedded[
+        "wp:featuredmedia"
+      ][0].media_details.sizes.medium.source_url;
     //   bike._embedded[
     //     "wp:featuredmedia"
     //   ][3].media_details.sizes.medium.source_url
